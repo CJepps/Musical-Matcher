@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Tourney:wght@600&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <title>Music Matcher</title>
 </head>
 <body>
@@ -27,10 +29,10 @@
         
 
     <!--New Game icon and button-->
-    <div class="container-fluid" id="new-game-icon">
+    <div class="container mt-5" id="new-game-icon">
         <div class="row justify-content-center">
             <img src="assets/images/homepage/new-game-icon.png" alt="new game keyboard image">
-            <button class="btn">New Game?</button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#new-game-modal" class="btn btn-primary">New Game?</button>
         </div>
     </div>
 
@@ -42,9 +44,53 @@
 
     </footer>
 
-    <!--Contact Developer Modal-->
-
     <!--New Game Modal-->
+    <!--Created using Bootstrap documentation https://getbootstrap.com/docs/4.4/components/modal/-->
+    <div class="modal" id="new-game-modal">
+        <div class="modal-dialog">  
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome to Music Matcher!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Welcome to music Matcher! This game of skill is aimed at improving your memory and even helping with your musical sight reading! Simply 
+                        match identical cards until there are none left to match. Higher scores are reached by making fewer moves but make sure you finish matching cards before the time limit runs out or you will lose! Good luck :)</p>
+                </div>
+                <div class="modal-header">
+                    <h6 class="modal-title">Select Difficulty</h6>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li class="modal-button">
+                            <div class="container mt-5">
+                                <a href="index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Beginner</a>
+                            </div>
+                        </li>
+                        <li class="modal-button">
+                            <div class="container mt-5">
+                                <a href="index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Intermediate</a>
+                            </div>
+                        </li>
+                        <li class="modal-button">
+                            <div class="container mt-5">
+                                <a href="index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Advanced</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                            
+                
+    <!--Contact Developer Modal -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
     
 </body>
