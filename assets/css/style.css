@@ -1,1 +1,63 @@
 /*----------------- Main font styles---------*/
+
+
+#homepage-logo {
+    background-color: #8D8E91;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------------ Game page styles ------------------*/
+
+.game-info {
+    font-family: "Montserrat", sans-serif ;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+html {
+    min-height: 100vh;
+}
+
+/*----------------- Card Styles -------------------------*/
+
+.card {
+    background-color: black;
+    height: 180px;
+    width: 130px;
+    display: inline-block;
+    text-align: center;
+    ; 
+}
+
+.card-area {
+    margin: 0;
+    width: 85%;
+    background: #1d1b1d;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 8px 9px 26px 0 rgb(46 61 73 / 50%);
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 3em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    
+}
+
