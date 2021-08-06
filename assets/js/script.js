@@ -4,6 +4,8 @@ if(document.readyState === 'loading') {                                         
         ready();
     }
 
+    
+
 
 function ready() {                                                                        
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
@@ -20,4 +22,23 @@ function ready() {
             game.flipCard(card);
         });
     });
+}
+
+class MusicMatcherGame {
+    constructor(totalTime, cards) {
+        this.cardsArray = cards;
+        this.totalTime = totalTime;
+        this.timeRemaining = totalTime;
+        this.timer = document.getElementById('time-remianing');
+        this.ticker = document.getElementById('moves');
+        this.starRating = document.getElementById('star-rating');
+    }
+    startGame() {
+        this.cardToCheck = null;
+        this.totalClicks = 0;
+        this.timeRemaining = this.totalTime;
+        this.matchedCards = [];
+        this.busy = true;
+
+    }
 }
