@@ -7,7 +7,7 @@ if(document.readyState === 'loading') {                                         
     
 
 
-function ready() {                                                                        
+function ready() {                                                                   // All Javascript developed using Port Exe tutorial here: https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=983s&ab_channel=PortEXE            
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'))
 
