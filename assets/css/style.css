@@ -6,7 +6,6 @@ html, body {
 
 .new-game-icon {
     width: 50vh;
-    padding-top: 10vh;
 }
 
 
@@ -16,12 +15,42 @@ html, body {
 
 
 #homepage-logo {
-    background-color: #8D8E91;
+    background-color: #1f2322;
+    margin-top: 1vh;
+    color: white;
 }
 
 h1 {
     font-family: "Righteous", sans-serif;
 }
+
+/*---------------- Button Styling ------------*/     /* Button hover animation adapted from https://codepen.io/RazorXio/pen/gMaoOW */
+
+.btn-primary {
+    background-color:rgb(42, 48, 54);
+}
+
+.button_slide {
+    color: #FFF;
+    border: 2px solid rgb(12, 12, 12);
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #070707;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+  
+  
+  
+  .slide_right:hover {
+    box-shadow: inset 500px 0 0 0 #1e1168;
+  }
 
 
 
