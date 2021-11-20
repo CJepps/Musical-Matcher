@@ -4,6 +4,11 @@ html, body {
     background-color: #1f2322;
 }
 
+#new-game-icon {
+    width: 50vh;
+    padding-top: 10vh;
+}
+
 
 
 
@@ -15,7 +20,7 @@ html, body {
 }
 
 h1 {
-    font-family: "tourney", sans-serif;
+    font-family: "Righteous", sans-serif;
 }
 
 
