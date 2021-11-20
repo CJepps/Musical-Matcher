@@ -4,7 +4,7 @@ html, body {
     background-color: #1f2322;
 }
 
-#new-game-icon {
+.new-game-icon {
     width: 50vh;
     padding-top: 10vh;
 }
