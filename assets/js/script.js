@@ -14,6 +14,7 @@ class musicMatcherGame {
         this.matchedCards = [];
         this.busy = true;
 
+        this.shuffleCards();
     }
     flipCard(card) {
         if(this.canFlipCard(card)) {
@@ -22,6 +23,16 @@ class musicMatcherGame {
             card.classList.add('visible');                       //Adds the class 'visible' to the card that is clicked, which should flip it and reveal the card backface.//  
         } 
     }
+
+    shuffleCards() {                                             //Shuffles cards based on the Fisher-Yates algorithm.// 
+        for(let i = this.cardsArray.length - 1; i > 0; i--) {
+            let randomIndex = Math.floor(Math.random() * (i+1));
+            this.cardsArray[randomIndex].style.order = 1;
+            this.cardsArray[i].style.order = randomIndex;
+        }
+
+    }
+
     canFlipCard(card) {
         return true;
         //return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck)
