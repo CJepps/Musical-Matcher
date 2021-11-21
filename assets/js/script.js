@@ -45,7 +45,11 @@ class musicMatcherGame {
     }
     gameOver() {
         clearInterval(this.countDown);
-        document.getElementById('game-over-modal').classList.add('visible')
+        document.getElementById('game-over-modal').classList.add('visible');
+    }
+    winGame() {
+        clearInterval(this.countDown);
+        document.getElementById('win-game-modal').classList.add('visible');
     }
 
     shuffleCards() {                                             //Shuffles cards based on the Fisher-Yates algorithm.// 

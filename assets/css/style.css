@@ -116,8 +116,12 @@ html {
     }
 }
 
-#game-over-modal. {
+#game-over-modal {
 
+}
+
+#win-game-modal {
+    
 }
 
 /*----------------- Card Styles -------------------------*/
