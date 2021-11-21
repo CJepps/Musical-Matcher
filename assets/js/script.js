@@ -32,8 +32,34 @@ class musicMatcherGame {
         if(this.canFlipCard(card)) {
             this.totalMoves++;
             this.ticker.innerText = this.totalMoves;
-            card.classList.add('visible');                       //Adds the class 'visible' to the card that is clicked, which should flip it and reveal the card backface.//  
+            card.classList.add('visible');                        //Adds the class 'visible' to the card that is clicked, which should flip it and reveal the card backface.// 
+            
+            if(this.cardToCheck)
+                this.checkForMatch(card);
+            else
+                this.card.cardToCheck = card;    
         } 
+    }
+    checkForMatch(card) {
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+            this.cardMatch(card, this.cardToCheck);
+        else
+            this.cardMisMatch(card, this.cardToCheck);    
+    }
+    cardMatch(card1, card2) {
+        this.matchedCards.push(card1);
+        this.matchedCards.push(card2);
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        if(this.matchedCards.length === this.cardsArray) {         // if the number of matched cards is the same as the number of cards in the cards array then all the cards have been matched and the win game function is called. //
+            this.winGame();                                     
+        }
+    }
+    cardMisMatch(card) {
+
+    }
+    getCardType(card) {
+        return card.getElementsByClassName('card-value')[0].src   // checks if the two cards have the same image file name. If they do then they are a match. //
     }
     startCountDown() {                                           //takes 1 off of timeRemaining every 1000ms(1 second)//
         return setInterval(() => {
