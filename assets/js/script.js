@@ -15,7 +15,7 @@ class musicMatcherGame {
         this.busy = true;
         setTimeout(() => {
             this.shuffleCards();
-            this.countdown = this.startCountdown();
+            this.countDown = this.startCountDown();
             this.busy = false;
         }, 500);
         this.hideCards();
@@ -34,6 +34,18 @@ class musicMatcherGame {
             this.ticker.innerText = this.totalMoves;
             card.classList.add('visible');                       //Adds the class 'visible' to the card that is clicked, which should flip it and reveal the card backface.//  
         } 
+    }
+    startCountDown() {                                           //takes 1 off of timeRemaining every 1000ms(1 second)//
+        return setInterval(() => {
+            this.timeRemaining--;
+            this.timer.innerText = this.timeRemaining;
+            if(this.timeRemaining === 0)                         // runs gameover function when timer hits zero.//
+                this.gameOver();
+        }, 1000);
+    }
+    gameOver() {
+        clearInterval(this.countDown);
+        document.getElementById('game-over-modal').classList.add('visible')
     }
 
     shuffleCards() {                                             //Shuffles cards based on the Fisher-Yates algorithm.// 
