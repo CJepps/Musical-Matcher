@@ -53,14 +53,14 @@ class musicMatcherGame {
         this.matchedCards.push(card2);
         card1.classList.add('matched');
         card2.classList.add('matched');
-        if(this.matchedCards.length === this.cardsArray) {         // if the number of matched cards is the same as the number of cards in the cards array then all the cards have been matched and the win game function is called. //
+        if(this.matchedCards.length === this.cardsArray.length) {         // if the number of matched cards is the same as the number of cards in the cards array then all the cards have been matched and the win game function is called. //
             this.winGame();                                     
         }
     }
-    cardMisMatch(card) {
+    cardMisMatch(card1, card2) {
         this.busy = true;
         setTimeout(() => {
-            card1.classList.remove('visible')
+            card1.classList.remove('visible')                      //Removes visible class if the cards are mismatched and should flip them back to front face of card.//
             card2.classList.remove('visible')
             this.busy = false;
         }, 1000);
@@ -78,11 +78,12 @@ class musicMatcherGame {
     }
     gameOver() {
         clearInterval(this.countDown);
-        document.getElementById('game-over-modal').classList.add('visible');
+        $("#game-over-modal").modal("toggle");
     }
     winGame() {
         clearInterval(this.countDown);
         document.getElementById('win-game-modal').classList.add('visible');
+        $("#win-game-modal").modal("toggle");
     }
 
     shuffleCards() {                                             //Shuffles cards based on the Fisher-Yates algorithm.// 
@@ -95,8 +96,7 @@ class musicMatcherGame {
     }
 
     canFlipCard(card) {
-        return true;
-        //return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck)
+        return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck)
     }
 }    
 
@@ -120,7 +120,7 @@ function ready() {                                                              
 
 if(document.readyState === 'loading') {                                                 /*makes sure that html loads before any JavaScript is run */
     document.addEventListener('DOMContentLoaded', ready());
-    } else {
-        ready();
-    }
+} else {
+    ready();
+}
     
