@@ -44,7 +44,9 @@ class musicMatcherGame {
         if(this.getCardType(card) === this.getCardType(this.cardToCheck))
             this.cardMatch(card, this.cardToCheck);
         else
-            this.cardMisMatch(card, this.cardToCheck);    
+            this.cardMisMatch(card, this.cardToCheck);
+        
+        this.cardToCheck = null;    
     }
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);
@@ -56,7 +58,12 @@ class musicMatcherGame {
         }
     }
     cardMisMatch(card) {
-
+        this.busy = true;
+        setTimeout(() => {
+            card1.classList.remove('visible')
+            card2.classList.remove('visible')
+            this.busy = false;
+        }, 1000);
     }
     getCardType(card) {
         return card.getElementsByClassName('card-value')[0].src   // checks if the two cards have the same image file name. If they do then they are a match. //
