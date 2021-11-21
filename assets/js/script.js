@@ -19,6 +19,7 @@ class musicMatcherGame {
         if(this.canFlipCard(card)) {
             this.totalMoves++;
             this.ticker.innerText = this.totalMoves;
+            card.classList.add('visible');                       //Adds the class 'visible' to the card that is clicked, which should flip it and reveal the card backface.//  
         } 
     }
     canFlipCard(card) {
