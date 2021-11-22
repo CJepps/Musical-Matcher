@@ -25,6 +25,7 @@ class AudioController {
 
 
 
+
 class musicMatcherGame {
     constructor(totalTime, cards) {
         this.cardsArray = cards;
@@ -61,19 +62,30 @@ class musicMatcherGame {
             this.ticker.innerText = this.totalMoves;
             card.classList.add('visible');                        //Adds the class 'visible' to the card that is clicked, which should flip it and reveal the card backface.// 
             
-            if(this.cardToCheck)
+            if(this.cardToCheck) {
                 this.checkForMatch(card);
-            else
-                this.card.cardToCheck = card;    
+                console.log('checking cards')
+            }
+            else {
+                this.cardToCheck = card; 
+            }
+                     
+              
         } 
     }
     checkForMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck)) {
             this.cardMatch(card, this.cardToCheck);
-        else
+        }
+            
+        else {
+            console.log('THis is a mismatch')
             this.cardMisMatch(card, this.cardToCheck);
+        }
+            
         
-        this.cardToCheck = null;    
+        this.cardToCheck = null;
+        console.log('This is a match')    
     }
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);
@@ -109,7 +121,6 @@ class musicMatcherGame {
     }
     winGame() {
         clearInterval(this.countDown);
-        document.getElementById('win-game-modal').classList.add('visible');
         $("#win-game-modal").modal("toggle");
     }
 
