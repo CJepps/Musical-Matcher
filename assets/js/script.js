@@ -1,3 +1,30 @@
+class AudioController {
+    constructor() {
+        this.flipSound = new Audio('assets/audio/flip.mp3');
+        this.matchSound = new Audio('assets/audio/match.mp3');
+        this.victorySound = new Audio('assets/audio/win-game.mp3');
+        this.gameOverSound = new Audio('assets/audio/game-over.mp3');
+    }
+    flip() {
+        this.flipSound.play();
+    }
+    match() {
+        this.matchSound.play();
+    }
+    victory() {
+        this.victorySound.play();
+    }
+    gameOver() {
+        this.gameOverSound.play();
+    }
+}
+
+
+
+
+
+
+
 class musicMatcherGame {
     constructor(totalTime, cards) {
         this.cardsArray = cards;
