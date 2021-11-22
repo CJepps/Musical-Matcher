@@ -1,6 +1,6 @@
 class AudioController {
     constructor() {
-        this.flipSound = new Audio('assets/audio/flip.mp3');
+        this.flipSound = new Audio("assets/audio/flip.mp3");
         this.matchSound = new Audio('assets/audio/match.mp3');
         this.victorySound = new Audio('assets/audio/win-game.mp3');
         this.gameOverSound = new Audio('assets/audio/game-over.mp3');
@@ -58,6 +58,7 @@ class musicMatcherGame {
     }
     flipCard(card) {
         if(this.canFlipCard(card)) {
+            
             this.totalMoves++;
             this.ticker.innerText = this.totalMoves;
             card.classList.add('visible');                        //Adds the class 'visible' to the card that is clicked, which should flip it and reveal the card backface.// 
@@ -141,7 +142,26 @@ class musicMatcherGame {
 function ready() {                                                                   // All Javascript developed using Port Exe tutorial here: https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=983s&ab_channel=PortEXE            
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new musicMatcherGame(120, cards);
+
+    let difficulty; //difficulty aid using pathname taken from https://github.com/Tawnygoody/MS2-World-of-Rugby/blob/master/assets/js/game-script.js
+    if(window.location.pathname.indexOf("beginner") != -1) { // if the pathname contains "beginner" the gameType will be set to beginner
+        difficulty = "beginner";
+    } else if(window.location.pathname.indexOf("intermediate") != -1) { 
+        difficulty = "intermediate";
+    } else { 
+        difficulty = "advanced";
+    }
+
+    let gameTime;
+    if (difficulty === "beginner") { //if the difficulty is set to "AMATEUR" the gameTime will be 120 seconds
+        gameTime = 120;
+    } else if (difficulty === "intermediate") { 
+        gameTime = 100;
+    } else { 
+        gameTime = 80;
+    }
+
+    let game = new musicMatcherGame(gameTime, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
