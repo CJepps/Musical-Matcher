@@ -4,6 +4,7 @@ class AudioController {
         this.matchSound = new Audio('assets/audio/match.mp3');
         this.victorySound = new Audio('assets/audio/win-game.mp3');
         this.gameOverSound = new Audio('assets/audio/game-over.mp3');
+        this.mismatchSound = new Audio('assets/audio/mismatch.wav');
     }
     flip() {
         this.flipSound.play();
@@ -16,6 +17,9 @@ class AudioController {
     }
     gameOver() {
         this.gameOverSound.play();
+    }
+    mismatch() {
+        this.mismatchSound.play();
     }
 }
 
@@ -100,6 +104,7 @@ class musicMatcherGame {
     }
     cardMisMatch(card1, card2) {
         this.busy = true;
+        this.audioController.mismatch();
         setTimeout(() => {
             card1.classList.remove('visible')                      //Removes visible class if the cards are mismatched and should flip them back to front face of card.//
             card2.classList.remove('visible')
