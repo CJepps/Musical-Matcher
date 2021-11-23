@@ -1,8 +1,8 @@
 function sendMail(contactForm) {
-    emailjs.send("gmail", "music-matcher", {
+    emailjs.send("service_8qhbcwt", "music-matcher", {
         "from_name": contactForm.name.value,
         "message": contactForm.message.value,
-        "from_email": contactForm.message.value,
+        "from_email": contactForm.email.value,
     })
     .then(
         function(response) {
@@ -13,4 +13,5 @@ function sendMail(contactForm) {
             console.log("Failure", error);
         }
     );
+    return false;
 }
