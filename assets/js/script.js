@@ -29,6 +29,7 @@ class AudioController {
 class musicMatcherGame {
     constructor(totalTime, cards) {
         this.cardsArray = cards;
+        this.audioController = new AudioController();
         this.totalTime = totalTime;
         this.timeRemaining = totalTime;
         this.timer = document.getElementById('time-remaining');
@@ -58,7 +59,7 @@ class musicMatcherGame {
     }
     flipCard(card) {
         if(this.canFlipCard(card)) {
-            
+            this.audioController.flip();
             this.totalMoves++;
             this.ticker.innerText = this.totalMoves;
             card.classList.add('visible');                        //Adds the class 'visible' to the card that is clicked, which should flip it and reveal the card backface.// 
