@@ -98,6 +98,7 @@ class musicMatcherGame {
         this.matchedCards.push(card2);
         card1.classList.add('matched');
         card2.classList.add('matched');
+        this.audioController.match();
         if(this.matchedCards.length === this.cardsArray.length) {         // if the number of matched cards is the same as the number of cards in the cards array then all the cards have been matched and the win game function is called. //
             this.winGame();                                     
         }
@@ -125,6 +126,7 @@ class musicMatcherGame {
     gameOver() {
         clearInterval(this.countDown);
         $("#game-over-modal").modal("toggle");
+        
     }
     winGame() {
         clearInterval(this.countDown);
