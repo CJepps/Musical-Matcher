@@ -144,9 +144,9 @@ function ready() {                                                              
     let cards = Array.from(document.getElementsByClassName('card'));
 
     let difficulty; //difficulty aid using pathname taken from https://github.com/Tawnygoody/MS2-World-of-Rugby/blob/master/assets/js/game-script.js
-    if(window.location.pathname.indexOf("beginner") != -1) { // if the pathname contains "beginner" the gameType will be set to beginner
+    if(window.location.pathname.indexOf("game-beginner.html") != -1) { // if the pathname contains "beginner" the gameType will be set to beginner
         difficulty = "beginner";
-    } else if(window.location.pathname.indexOf("intermediate") != -1) { 
+    } else if(window.location.pathname.indexOf("game-intermediate.html") != -1) { 
         difficulty = "intermediate";
     } else { 
         difficulty = "advanced";
