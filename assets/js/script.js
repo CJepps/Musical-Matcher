@@ -125,11 +125,13 @@ class musicMatcherGame {
     }
     gameOver() {
         clearInterval(this.countDown);
+        this.audioController.gameOver();
         $("#game-over-modal").modal("toggle");
         
     }
     winGame() {
         clearInterval(this.countDown);
+        this.audioController.victory();
         $("#win-game-modal").modal("toggle");
     }
 
