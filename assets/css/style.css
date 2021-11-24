@@ -108,7 +108,7 @@ html {
 
 @keyframes overlay-grow {
     from {
-        background-color: rgba(0, 0, 0, 0,);
+        background-color: black;
         font-size: 0;
     }
     to {
@@ -138,14 +138,6 @@ html {
     transform: rotatey(0);
 }
 
-.card.matched .card-value {                          /*flashes card green on a match and needs to play corresponding audio*/
-
-}
-
-.card.unmatched .card-value {                          /*flashes card red on a incorrect match and needs to play corresponding audio*/
-                                         
-
-}
 
 .card-area {                                            /*grid structure designed using css from Sandra Israel-Ovirih https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript */
     

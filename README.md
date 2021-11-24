@@ -119,7 +119,13 @@ The main requirement of this project was to create a memory card game that is fu
 * used to import 'Audiowide' and 'Roboto' fonts to style text
 10. [amiresponsive](http://ami.responsivedesign.is/)
 * used to create mockups of the website at different resolutions (for the first image of readme)
-# Testing 
+# Testing
+---
+### Validator Testing
+  No errors were found when passing my HTML or CSS code through the respective W3C validators
+ - [HTML Validation](assets/images/Screenshots/djlom-html-validation.PNG)
+ - [CSS Validation](assets/images/Screenshots/djlom-css-validation.PNG)
+
 # Deployment
 ---
 ### Deploying page to GitHub pages from repository
