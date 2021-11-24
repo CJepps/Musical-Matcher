@@ -62,14 +62,20 @@ The main requirement of this project was to create a memory card game that is fu
 ## Features
 ---
 ### Home page
-- Central music themed icon that doubles as a new game button 
+- Central music themed icon that doubles as a new game button.
+![picture of homepage](assets/images/screenshots/music-matcher-contact-form.PNG)  
 - "Contact the Developer" button that opens a modal containing a contact form. Here, users can email their enquiries/ feedback using EmailJS API
+![picture of contact developer modal](assets/images/screenshots/music-matcher-homepage.PNG) 
 ### All pages
 - Logo for 'Music Matcher' which allows navigation to Home page when clicked.
+
+![picture of logo image](assets/images/screenshots/music-matcher-logo-screenshot.PNG)
 ### Home page modal
 - Provides instructions/ rules of the game
 - New game section includes three buttons; Beginner, Intermediate, Expert, that allows users to select the difficulty of the game
+![picture of new game modal](assets/images/screenshots/music-matcher-newgame-modal.PNG)
 ### Game page
+![picture of gamepage](assets/images/screenshots/music-matcher-gamepage.PNG)
 - Game information section displays the time remaining in the game, number of moves made, and a star rating based on number of moves made.
 - 4x4 grid of 16 cards that are on a dark background so they are easily visable by the user.
 - Cards present a musical notation image when clicked. If a correct pair is clicked then both cards  do not flip back over and a sound is played to notify user of a correct pair. If an incorrect pair is matched then the cards turn back over and a different sound is played to notify the user of an incorrect match .
@@ -80,12 +86,14 @@ The main requirement of this project was to create a memory card game that is fu
 ### Game page modals
 - Modal presents once time limit has been reached (lost game) or all cards have been matched (won game)
 ### Won game modal 
+![picture of won game modal](assets/images/screenshots/music-matcher-wongame.PNG)
 - Congratulates users with a victory image.
 - Includes a game information section that displays; number of moves made, corresponding star rating, and time remaining. 
 - Includes a 'Play Again?' button that starts the game again at the previously played difficulty.
 - Change difficulty button allows users to start the game again on another difficulty.
 - Homepage button returns users to the homepage.
 ### Lost game modal
+![picture of lost game modal](assets/images/screenshots/music-matcher-gameover.PNG)
 - Comiserates users with a game over image 
 - Includes a game information section that displays; number of moves made, corresponding star rating, and time remaining. 
 - Includes a 'Play Again?' button that starts the game again at the previously played difficulty.
