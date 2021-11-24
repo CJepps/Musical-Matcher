@@ -76,7 +76,7 @@ The main requirement of this project was to create a memory card game that is fu
 ![picture of new game modal](assets/images/screenshots/music-matcher-newgame-modal.PNG)
 ### Game page
 ![picture of gamepage](assets/images/screenshots/music-matcher-gamepage.PNG)
-- Game information section displays the time remaining in the game, number of moves made, and a star rating based on number of moves made.
+- Game information section displays the time remaining in the game and number of moves made.
 - 4x4 grid of 16 cards that are on a dark background so they are easily visable by the user.
 - Cards present a musical notation image when clicked. If a correct pair is clicked then both cards  do not flip back over and a sound is played to notify user of a correct pair. If an incorrect pair is matched then the cards turn back over and a different sound is played to notify the user of an incorrect match .
 - Cards emit a flip sound when clicked.
@@ -147,13 +147,13 @@ The main requirement of this project was to create a memory card game that is fu
 
 ### The game needs to be fun to play and easy to understand from the first instance so that users continue to play.
 - On selecting 'new game' from the home page, a modal is presented which explains the game and how to play.
-- Audio has been added to the game to make it more fun and immersive 
+- Audio has been added to the game to make it more fun and immersive. 
 ### The game needs to be fully reponsive on a range of screen resolutions so that a broader audience is reached.
-- Styling of the website using bootstrap responsive grids ensures that the game can be played easily at all resolutions 
+- Styling of the website using bootstrap responsive grids ensures that the game can be played easily at all resolutions. 
 
 ## User Goals
 ### I want to know what the website is offering me, with a clear and straightforward layout to enable navigation.
-- the styling of the home page shows users that this is a musical themed game through the use of a large keyboard image
+- the styling of the home page shows users that this is a musical themed game through the use of a large keyboard image.
 - The home page includes a button to start a new game. This shows users that this website is a game.
 - Clicking the home page logo enable navigation back to the home page.
 ![picture of homepage](assets/images/screenshots/music-matcher-homepage.PNG)
@@ -166,8 +166,8 @@ The main requirement of this project was to create a memory card game that is fu
 - each game page features information on the time remaining in the game and the number of moves made.
 ![picture of game information section](assets/images/screenshots/music-matcher-game-info.PNG) 
 - If a card is mismatched, a horrible noise is played.
-- If a card is matched correctly with another, a pleasant noise is played 
-- If the game is won, pleasant audio is played and the victory modal is displayed, congratulating the user .
+- If a card is matched correctly with another, a pleasant noise is played. 
+- If the game is won, pleasant audio is played and the victory modal is displayed, congratulating the user.
 ![picture of winning the game](assets/images/screenshots/music-matcher-wongame.PNG) 
 - If the game is lost, a corresponding audio is played and a gamover modal is displayed.
 ![picture of losing the game](assets/images/screenshots/music-matcher-gameover.PNG) 
@@ -181,7 +181,7 @@ The main requirement of this project was to create a memory card game that is fu
 ![picture of homepage](assets/images/screenshots/music-matcher-homepage.PNG)
 ![picture of contact developer modal](assets/images/screenshots/music-matcher-contact-form.PNG) 
 - The "Contact developer" modal presents the user a form they can complete with their suggestions/ feedback.
-- Once the form is submitted, this is sent to my email via the EmailJS service
+- Once the form is submitted, this is sent to my email via the EmailJS service.
 ---
 ## Further testing 
 
@@ -220,7 +220,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/CJepps/Musical-Matcher)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
+4. Open Git Bash.
 5. Change the current working directory to the location where you want the cloned directory to be made.
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
