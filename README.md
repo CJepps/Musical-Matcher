@@ -46,21 +46,21 @@ The main requirement of this project was to create a memory card game that is fu
 ---
 ### Wireframes - created using Balsamiq
 #### Home Page
-- iPhone - [View](/workspace/Musical-Matcher/assets/images/wireframes/homepage-iphone.JPG)
-- iPad - [View](/workspace/Musical-Matcher/assets/images/wireframes/homepage-ipad.JPG)
-- Desktop - [View](/workspace/Musical-Matcher/assets/images/wireframes/homepage-desktop.JPG)
+- iPhone - [View](assets/images/wireframes/homepage-iphone.JPG)
+- iPad - [View](assets/images/wireframes/homepage-ipad.JPG)
+- Desktop - [View](assets/images/wireframes/homepage-desktop.JPG)
 #### Home Page Modal
-- iPhone - [View](/workspace/Musical-Matcher/assets/images/wireframes/homepage-modal-iphone.JPG)
-- iPad - [View](/workspace/Musical-Matcher/assets/images/wireframes/homepage-modal-ipad.JPG)
-- Desktop - [View](/workspace/Musical-Matcher/assets/images/wireframes/homepage-modal-desktop.JPG)
+- iPhone - [View](assets/images/wireframes/homepage-modal-iphone.JPG)
+- iPad - [View](assets/images/wireframes/homepage-modal-ipad.JPG)
+- Desktop - [View](assets/images/wireframes/homepage-modal-desktop.JPG)
 #### Game
-- iPhone - [View](/workspace/Musical-Matcher/assets/images/wireframes/gamepage-iphone.JPG)
-- iPad - [View](/workspace/Musical-Matcher/assets/images/wireframes/gamepage-ipad.JPG)
-- Desktop - [View](/workspace/Musical-Matcher/assets/images/wireframes/gamepage-desktop.JPG)
+- iPhone - [View](assets/images/wireframes/gamepage-iphone.JPG)
+- iPad - [View](assets/images/wireframes/gamepage-ipad.JPG)
+- Desktop - [View](assets/images/wireframes/gamepage-desktop.JPG)
 #### Game Modal
-- iPhone - [View](/workspace/Musical-Matcher/assets/images/wireframes/gamepage-modal-iphone.JPG)
-- iPad - [View](/workspace/Musical-Matcher/assets/images/wireframes/gamepage-modal-ipad.JPG)
-- Desktop - [View](/workspace/Musical-Matcher/assets/images/wireframes/gamepage-modal-desktop.JPG)
+- iPhone - [View](assets/images/wireframes/gamepage-modal-iphone.JPG)
+- iPad - [View](assets/images/wireframes/gamepage-modal-ipad.JPG)
+- Desktop - [View](assets/images/wireframes/gamepage-modal-desktop.JPG)
 ## Features
 ---
 ### Home page
