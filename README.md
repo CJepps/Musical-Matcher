@@ -19,13 +19,11 @@ The main requirement of this project was to create a memory card game that is fu
 - I want to be able to start the game easiliy and be presented with instructions on how to play the game.
 - I want feedback on how well i am doing in the game. 
 - I want the option of different difficulty levels.
-- I want the ability to enable / disable sounds.
 - I want to contact the developer with any suggestions / feedback for the game. 
 
 ## Scope
 ---
-- Home page with logo, start button that presents instructions on how to play the game (Modal).
-- A 
+- Home page with logo, start button that presents instructions on how to play the game (Modal). 
 - A button that enables users to bring up a contact form to email me (EmailJS API)
 - Separate Game page with blank cards laid out in a Grid. 
 - A timer that is displayed to the user and starts counting down upon the first card being flipped.
@@ -37,7 +35,7 @@ The main requirement of this project was to create a memory card game that is fu
 ### Design
 - Color Palette - I've gone for a minimalist styling to complement the musical theme and simplicity of a keyboard. I will use a monochrome color design for the majority of the application and use red (#FF0000) and green (#00FF00) in the game to show correct/ incorrect pairs respectably.
 
-- Typography - I will use the Tourney Font (Google fonts) to style the website icon. Montserrat will be used as the main font with Sans Serif as the fallback in case this does not load.
+- Typography - I will use the Righteous Font (Google fonts) to style the website icon. Montserrat will be used as the main font with Sans Serif as the fallback in case this does not load.
 
 - Audio - It is my intention that when a user flips a card and reveals an image of a particular musical notation, a relevant sound will play. This will add an educational element to the game where users can practice corresponding musical notation to the sound produced. This would help with abilities such as sight reading. 
 
@@ -74,10 +72,11 @@ The main requirement of this project was to create a memory card game that is fu
 ### Game page
 - Game information section displays the time remaining in the game, number of moves made, and a star rating based on number of moves made.
 - 4x4 grid of 16 cards that are on a dark background so they are easily visable by the user.
-- Cards present a musical notation image when clicked. If a correct pair is clicked then both cards flash green and do not flip back over. If an incorrect pair is matched then the cards flash red and turn back over.
-- Cards emit sound when clicked, corresponding to the type of image displayed on the card.
-- Audio toggle swtch allows users to disable sound.
-- Restart button which allows users to start game from the start.
+- Cards present a musical notation image when clicked. If a correct pair is clicked then both cards  do not flip back over and a sound is played to notify user of a correct pair. If an incorrect pair is matched then the cards turn back over and a different sound is played to notify the user of an incorrect match .
+- Cards emit a flip sound when clicked.
+- If the game is completed succesfully, a corresponding victory sound will play and the won game modal will appear.
+- If the time limit is reached and the user loses the game, a corresponding gameover sound will play and the Lost game modal will appear. 
+
 ### Game page modals
 - Modal presents once time limit has been reached (lost game) or all cards have been matched (won game)
 ### Won game modal 
@@ -114,18 +113,80 @@ The main requirement of this project was to create a memory card game that is fu
 7. Balsamiq
 * Used to create wireframes at the start of the project
 8. jQuery 
-* included with bootstrap. Allows for the collapsible navbar
+* included with bootstrap. 
 9. [Googlefonts CDN](https://fonts.google.com/) 
-* used to import 'Audiowide' and 'Roboto' fonts to style text
+* used to import 'Righteous' and 'Montserrat' fonts to style text
 10. [amiresponsive](http://ami.responsivedesign.is/)
 * used to create mockups of the website at different resolutions (for the first image of readme)
+11. LambdaTest
+* used to test responsiveness on a range of browsers 
 # Testing
 ---
 ### Validator Testing
-  No errors were found when passing my HTML or CSS code through the respective W3C validators
- - [HTML Validation](assets/images/Screenshots/djlom-html-validation.PNG)
- - [CSS Validation](assets/images/Screenshots/djlom-css-validation.PNG)
+  No errors were found when passing my HTML, CSS, or JavaScript code through the respective W3C/JSLint validators
+ - [HTML Validation (index.html)](assets/images/screenshots/music-matcher-html-test.PNG)
+ - [HTML Validation (Game html pages)](assets/images/screenshots/music-matcher-html-test-games.PNG)
+ - [CSS Validation](assets/images/screenshots/music-matcher-css.PNG)
+ - [JavaScript Validation (script.js)](assets/images/screenshots/music-matcher-js-test.PNG)
+ - [JavaScript Validation (sendEmail.js)](assets/images/screenshots/music-matcher-jstest-sendmail.PNG)
 
+ # Testing user stories from UX section
+---
+## Business Goals
+### The game needs to incorporate a home page that is visually appealing and straightforward to use. 
+- the home page only has two buttons. These are clearly labelled to aid navigation throughout the site.
+![picture of homepage](assets/images/screenshots/music-matcher-homepage.PNG)
+
+### The game needs to be fun to play and easy to understand from the first instance so that users continue to play.
+- On selecting 'new game' from the home page, a modal is presented which explains the game and how to play.
+- Audio has been added to the game to make it more fun and immersive 
+### The game needs to be fully reponsive on a range of screen resolutions so that a broader audience is reached.
+- Styling of the website using bootstrap responsive grids ensures that the game can be played easily at all resolutions 
+
+## User Goals
+### I want to know what the website is offering me, with a clear and straightforward layout to enable navigation.
+- the styling of the home page shows users that this is a musical themed game through the use of a large keyboard image
+- The home page includes a button to start a new game. This shows users that this website is a game.
+- Clicking the home page logo enable navigation back to the home page.
+![picture of homepage](assets/images/screenshots/music-matcher-homepage.PNG)
+### I want to be able to start the game easiliy and be presented with instructions on how to play the game.
+- when selecting game difficulty, the user is presented with instructions on how to play the game in the modal.
+![picture of homepage](assets/images/screenshots/music-matcher-newgame-modal.PNG)
+- on entering the game page, a message is displayed in an overlay. This tells the user to click anywhere and the game will begin.
+![picture of game overlay](assets/images/screenshots/music-matcher-clicktostart.PNG) 
+### I want feedback on how well i am doing in the game.
+- each game page features information on the time remaining in the game and the number of moves made.
+![picture of game information section](assets/images/screenshots/music-matcher-game-info.PNG) 
+- If a card is mismatched, a horrible noise is played.
+- If a card is matched correctly with another, a pleasant noise is played 
+- If the game is won, pleasant audio is played and the victory modal is displayed, congratulating the user .
+![picture of winning the game](assets/images/screenshots/music-matcher-wongame.PNG) 
+- If the game is lost, a corresponding audio is played and a gamover modal is displayed.
+![picture of losing the game](assets/images/screenshots/music-matcher-gameover.PNG) 
+### I want the option of different difficulty levels.
+- the user can select from three different difficulties in the new game modal.
+![picture of selecting game difficulties](assets/images/screenshots/music-matcher-newgame-modal.PNG) 
+- the user is then directed to the relevant game page for the selected difficulty.
+- game difficulty is set using the time available to match all cards; the more time given to complete the game, the easier a difficulty it is. 
+### I want to contact the developer with any suggestions / feedback for the game.
+- the home page features a button to "contact developer" this opens a modal
+![picture of homepage](assets/images/screenshots/music-matcher-homepage.PNG)
+![picture of contact developer modal](assets/images/screenshots/music-matcher-contact-form.PNG) 
+- The "Contact developer" modal presents the user a form they can complete with their suggestions/ feedback.
+- Once the form is submitted, this is sent to my email via the EmailJS service
+---
+## Further testing 
+
+### EmailJS testing 
+
+- EmailJS api functionality was tested on their website. [test screenshot](assets/images/screenshots/emailjs-test.PNG)
+
+### Browser compatibility 
+Lambdatest was used to test the website across a range of browsers
+
+
+
+ 
 # Deployment
 ---
 ### Deploying page to GitHub pages from repository
