@@ -1,3 +1,4 @@
+// All Javascript developed using Port Exe tutorial here: https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=983s&ab_channel=PortEXE //
 class AudioController {
     constructor() {
         this.flipSound = new Audio("assets/audio/flip.mp3");
@@ -59,8 +60,8 @@ class musicMatcherGame {
             this.audioController.flip();
             this.totalMoves++;
             this.ticker.innerText = this.totalMoves;
-            card.classList.add('visible');                        //Adds the class 'visible' to the card that is clicked, which should flip it and reveal the card backface.// 
-            
+            card.classList.add('visible');                         
+            //Adds the class 'visible' to the card that is clicked, which should flip it and reveal the card backface.//
             if(this.cardToCheck) {
                 this.checkForMatch(card);
             }
@@ -89,27 +90,32 @@ class musicMatcherGame {
         card1.classList.add('matched');
         card2.classList.add('matched');
         this.audioController.match();
-        if(this.matchedCards.length === this.cardsArray.length) {         // if the number of matched cards is the same as the number of cards in the cards array then all the cards have been matched and the win game function is called. //
-            this.winGame();                                     
+        if(this.matchedCards.length === this.cardsArray.length) {         
+            this.winGame();
+            // if the number of matched cards is the same as the number of cards in the cards array then all the cards have been matched and the win game function is called. //                                     
         }
     }
     cardMisMatch(card1, card2) {
         this.busy = true;
         this.audioController.mismatch();
         setTimeout(() => {
-            card1.classList.remove('visible');                      //Removes visible class if the cards are mismatched and should flip them back to front face of card.//
+            card1.classList.remove('visible');                      
             card2.classList.remove('visible');
+            //Removes visible class if the cards are mismatched and should flip them back to front face of card.//
             this.busy = false;
         }, 1000);
     }
     getCardType(card) {
-        return card.getElementsByClassName('card-value')[0].src;   // checks if the two cards have the same image file name. If they do then they are a match. //
+        return card.getElementsByClassName('card-value')[0].src;   
+        // checks if the two cards have the same image file name. If they do then they are a match. //
     }
-    startCountDown() {                                           //takes 1 off of timeRemaining every 1000ms(1 second)//
+    startCountDown() { 
+        //takes 1 off of timeRemaining every 1000ms(1 second)//                                          
         return setInterval(() => {
             this.timeRemaining--;
             this.timer.innerText = this.timeRemaining;
-            if(this.timeRemaining === 0)                         // runs gameover function when timer hits zero.//
+            if(this.timeRemaining === 0)
+            // runs gameover function when timer hits zero.//                         
                 this.gameOver();
         }, 1000);
     }
@@ -125,13 +131,13 @@ class musicMatcherGame {
         $("#win-game-modal").modal("toggle");
     }
 
-    shuffleCards() {                                             //Shuffles cards based on the Fisher-Yates algorithm.// 
+    shuffleCards() {                                              
         for(let i = this.cardsArray.length - 1; i > 0; i--) {
             let randomIndex = Math.floor(Math.random() * (i+1));
             this.cardsArray[randomIndex].style.order = 1;
             this.cardsArray[i].style.order = randomIndex;
         }
-
+        //Shuffles cards based on the Fisher-Yates algorithm.//
     }
 
     canFlipCard(card) {
@@ -139,12 +145,13 @@ class musicMatcherGame {
     }
 }    
 
-function ready() {                                                                   // All Javascript developed using Port Exe tutorial here: https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=983s&ab_channel=PortEXE            
+function ready() {                                                                               
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-
-    let difficulty; //difficulty aid using pathname taken from https://github.com/Tawnygoody/MS2-World-of-Rugby/blob/master/assets/js/game-script.js
-    if(window.location.pathname.indexOf("game-beginner.html") != -1) { // if the pathname contains "beginner" the gameType will be set to beginner
+//difficulty aid using pathname taken from https://github.com/Tawnygoody/MS2-World-of-Rugby/blob/master/assets/js/game-script.js
+    let difficulty; 
+    if(window.location.pathname.indexOf("game-beginner.html") != -1) { 
+        // if the pathname contains "beginner" the gameType will be set to beginner
         difficulty = "beginner";
     } else if(window.location.pathname.indexOf("game-intermediate.html") != -1) { 
         difficulty = "intermediate";
@@ -153,7 +160,8 @@ function ready() {                                                              
     }
 
     let gameTime;
-    if (difficulty === "beginner") { //if the difficulty is set to "AMATEUR" the gameTime will be 120 seconds
+    //if the difficulty is set to "AMATEUR" the gameTime will be 120 seconds
+    if (difficulty === "beginner") { 
         gameTime = 120;
     } else if (difficulty === "intermediate") { 
         gameTime = 100;
@@ -162,10 +170,10 @@ function ready() {                                                              
     }
 
     let game = new musicMatcherGame(gameTime, cards);
-
+    //removes the visisble class when an overlay is clicked // 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
-            overlay.classList.remove('visible');                                       /*removes the visisble class when an overlay is clicked */ 
+            overlay.classList.remove('visible');                                       
             game.startGame();    
         });
     });
@@ -175,8 +183,8 @@ function ready() {                                                              
         });
     });
 }
-
-if(document.readyState === 'loading') {                                                 /*makes sure that html loads before any JavaScript is run */
+//makes sure that html loads before any JavaScript is run //
+if(document.readyState === 'loading') {                                                 
     document.addEventListener('DOMContentLoaded', ready());
 } else {
     ready();

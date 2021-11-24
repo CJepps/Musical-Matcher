@@ -1,3 +1,4 @@
+//sendmail function developed with help from Code institute tutorial by Matt Rudge// 
 function sendMail(contactForm) {
     emailjs.send("service_8qhbcwt", "music-matcher", {
         "from_name": contactForm.name.value,
