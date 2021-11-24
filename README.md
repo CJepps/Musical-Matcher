@@ -1,4 +1,6 @@
-# Musical Matcher 
+# [Musical Matcher](https://cjepps.github.io/Musical-Matcher/) 
+
+<img src="assets/images/wireframes/music-matcher-responsive.PNG" alt="Music matcher home page image" width="800">
 
 # User experience (UX)
 
@@ -94,7 +96,61 @@ The main requirement of this project was to create a memory card game that is fu
 
 # Technologies used 
 ## Languages
+---
+1. HTML5
+2. CSS3 
+3. JavaScript
+
 ## Additional Frameworks, Libraries, and Programs used
+---
+3. Bootstrap 4.4.1
+* Used the grid system to aid with the responsiveness of the website
+4. Font awesome
+* Used to provide icons for the website
+5. Git
+* used for version control
+6. GitHub
+* used to store pushed code in a repository
+7. Balsamiq
+* Used to create wireframes at the start of the project
+8. jQuery 
+* included with bootstrap. Allows for the collapsible navbar
+9. [Googlefonts CDN](https://fonts.google.com/) 
+* used to import 'Audiowide' and 'Roboto' fonts to style text
+10. [amiresponsive](http://ami.responsivedesign.is/)
+* used to create mockups of the website at different resolutions (for the first image of readme)
 # Testing 
 # Deployment
+---
+### Deploying page to GitHub pages from repository
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/CJepps/Musical-Matcher)
+2. At the top of the Repository, locate the "Settings" Button on the menu.
+    
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site [link](https://cjepps.github.io/Musical-Matcher/) in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/CJepps/Musical-Matcher)
+2. At the top of the Repository just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/CJepps/Musical-Matcher)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+
+7. Press Enter. Your local clone will be created.
+
+*Deployment steps created with reference to the code institute sample readme (https://github.com/Code-Institute-Solutions/SampleREADME)*
+
 # Credits 
