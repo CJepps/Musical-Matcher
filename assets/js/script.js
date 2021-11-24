@@ -23,13 +23,6 @@ class AudioController {
     }
 }
 
-
-
-
-
-
-
-
 class musicMatcherGame {
     constructor(totalTime, cards) {
         this.cardsArray = cards;
@@ -70,7 +63,6 @@ class musicMatcherGame {
             
             if(this.cardToCheck) {
                 this.checkForMatch(card);
-                console.log('checking cards')
             }
             else {
                 this.cardToCheck = card; 
@@ -85,13 +77,11 @@ class musicMatcherGame {
         }
             
         else {
-            console.log('THis is a mismatch')
             this.cardMisMatch(card, this.cardToCheck);
         }
             
         
-        this.cardToCheck = null;
-        console.log('This is a match')    
+        this.cardToCheck = null;   
     }
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);
@@ -107,13 +97,13 @@ class musicMatcherGame {
         this.busy = true;
         this.audioController.mismatch();
         setTimeout(() => {
-            card1.classList.remove('visible')                      //Removes visible class if the cards are mismatched and should flip them back to front face of card.//
-            card2.classList.remove('visible')
+            card1.classList.remove('visible');                      //Removes visible class if the cards are mismatched and should flip them back to front face of card.//
+            card2.classList.remove('visible');
             this.busy = false;
         }, 1000);
     }
     getCardType(card) {
-        return card.getElementsByClassName('card-value')[0].src   // checks if the two cards have the same image file name. If they do then they are a match. //
+        return card.getElementsByClassName('card-value')[0].src;   // checks if the two cards have the same image file name. If they do then they are a match. //
     }
     startCountDown() {                                           //takes 1 off of timeRemaining every 1000ms(1 second)//
         return setInterval(() => {
@@ -145,7 +135,7 @@ class musicMatcherGame {
     }
 
     canFlipCard(card) {
-        return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck)
+        return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck);
     }
 }    
 
