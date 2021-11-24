@@ -190,7 +190,8 @@ The main requirement of this project was to create a memory card game that is fu
 - EmailJS api functionality was tested on their website. [test screenshot](assets/images/screenshots/emailjs-test.PNG)
 
 ### Browser compatibility 
-Lambdatest was used to test the website across a range of browsers
+* Lambdatest was used to test the website across a range of browsers.
+* Manual testing was also undertaken using devtools in Google Chrome to test responsiveness at different resolutions. 
 
 
 
@@ -229,3 +230,6 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 *Deployment steps created with reference to the code institute sample readme (https://github.com/Code-Institute-Solutions/SampleREADME)*
 
 # Credits 
+* [Bootstrap documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+* [Portexe's tutorial on creating a card matching game](https://www.youtube.com/watch?v=3uuQ3g92oPQ)
+* [Matt Rudge's code institute tutorial on EmailJS](https://github.com/Code-Institute-Solutions/InteractiveFrontendDevelopment-Resume/tree/master/03-SendingEmailsUsingEmailJS/06-sending_emails)
